@@ -1,12 +1,16 @@
 <ul>
   <li><%= link_to "Sign Up", "#" %></li>
   <li><%= link_to "Log In", "#" %></li>
-  <li><%= link_to "Create a Product", new_product_url %></li>
 </ul>
+
 <h1>Products</h1>
 
 <% @products.each do |p| %>
 <h2><%= link_to p.name, "/products/#{p.id}" %></h2>
-<p><%= p[:description] %></p>
-<p>Price: <%= p[:price_in_cents] %>
+<p><%= p.description %></p>
+<p>Price: <%= p.price_in_cents %>
 <% end %>
+
+<p>
+  <%= link_to "Create a Product", new_product_url %>
+</p>
