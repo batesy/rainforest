@@ -8,7 +8,7 @@
 <% @products.each do |p| %>
 <h2><%= link_to p.name, "/products/#{p.id}" %></h2>
 <p><%= p.description %></p>
-<p>Price: <%= p.price_in_cents %>
+<p>Price: <%= p.formatted_price %>
 <% end %>
 
 <p>
